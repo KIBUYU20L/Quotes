@@ -9,11 +9,11 @@ import { Quote } from './quote';
 export class AppComponent {
   title = 'Quotes'
   quotes:Quote[] = [
-    {id:1, name:'Once bitten twice shy'},
-    {id:2,name:'No man is an Island'},
-    {id:3,name:'God is the way'},
-    {id:4,name:'Act as if what you do makes a difference. Yes It Does.'},
-    // {id:5,name:'Solve math homework'},
-    // {id:6,name:'Plot my world domination plan'},
+    new Quote(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son'),
+    new Quote(2,'Buy Cookies','I have to buy cookies for the parrot'),
+    new Quote(3,'Get new Phone Case','Diana has her birthday coming up soon'),
+    new Quote(4,'Get Dog Food','Pupper likes expensive snacks'),
+    new Quote(5,'Solve math homework','Damn Math'),
+    new Quote(6,'Plot my world domination plan','Cause I am an evil overlord'),
   ];
 }

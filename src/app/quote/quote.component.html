@@ -1,1 +1,24 @@
-<p>quote works!</p>
+<style>
+    .container{
+      height: 300px;
+      background-color: rgb(144, 156, 154);
+      color: black;
+  
+    }
+    h1{
+      color:aqua;
+      text-align:center;
+    }
+  </style>
+  
+  <div class="container">
+    <h1>Quotes</h1>
+    <hr>
+    <ul>
+        <li *ngFor='let quote of quotes'>
+          {{quote.name}}
+          <app-quote-detail [quote]='quote'></app-quote-detail>
+        </li>
+    </ul>
+    <p *ngIf='quotes.length >10'>Your quotes are too many</p>
+  </div>
