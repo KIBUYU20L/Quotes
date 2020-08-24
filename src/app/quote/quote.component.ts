@@ -17,6 +17,16 @@ export class QuoteComponent implements OnInit {
     new Quote(5,'Solve math homework','Damn Math'),
     new Quote(6,'Plot my world domination plan','Cause I am an evil overlord'),
   ];
+  Quote: any;
+
+  toggleDetails(index){
+    this.quotes[index].showQuote = !this.quotes[index].showQuote;
+  }
+  completeQuote(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
 
   constructor() { }
 
