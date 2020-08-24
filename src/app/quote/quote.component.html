@@ -16,15 +16,16 @@
     <hr>
     <div class="row">
       <div class="col-md-6">
-        <ul>
           <div *ngFor='let quote of quotes; let i = index'>
-            <li appStrikethrough> {{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
-            <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-quote-detail *ngIf='quote.showQuote' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+              <h6 appStrikethrough> {{quote.name}} due on {{quote.completeDate|date|uppercase}}</h6>
+              <button (click)='toggleDetails(i)'>click to see quote</button>
+              <app-quote-detail *ngIf='quote.showQuote' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
           </div>
-        </ul>
-        <p *ngIf='quotes.length >10'>Your quotes are too many</p>
+      </div>
+      <div class="col-md-6">
+        <app-quote-form></app-quote-form>
       </div>
     </div>
+    <p *ngIf='quotes.length >10'>Your quotes are too many</p>
    
   </div>
