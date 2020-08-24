@@ -9,6 +9,7 @@
       color:aqua;
       text-align:center;
     }
+
 </style>
   
   <div class="container">
@@ -23,7 +24,7 @@
           </div>
       </div>
       <div class="col-md-6">
-        <app-quote-form></app-quote-form>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
     </div>
     <p *ngIf='quotes.length >10'>Your quotes are too many</p>
